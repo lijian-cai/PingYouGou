@@ -1,0 +1,304 @@
+/* main start */
+.main {
+  width: 980px;
+  height: 455px;
+  margin-left: 219px;
+  margin-top: 10px;
+}
+
+.focus {
+  position: relative;
+  width: 720px;
+  height: 455px;
+}
+
+.newsflash {
+  width: 250px;
+  height: 455px;
+}
+
+.arrow-l,
+.arrow-r {
+  position: absolute;
+  width: 24px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, .2);
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-family: 'icomoon';
+  font-size: 18px;
+}
+
+.arrow-l {
+  left: 0;
+}
+
+.arrow-r {
+  right: 0;
+}
+
+.arrow-l:hover,
+.arrow-r:hover {
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+}
+
+.circles {
+  position: absolute;
+  left: 50px;
+  bottom: 10px;
+}
+
+.circles li {
+  float: left;
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  /* background-color: #fff; */
+  border: solid 2px rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.current {
+  background-color: #fff;
+}
+
+.news {
+  height: 163px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+}
+
+.news-hd {
+  height: 32px;
+  padding: 0 15px;
+  border-bottom: dotted 1px #ccc;
+  line-height: 32px;
+  font-size: 14px;
+}
+
+.news-hd a {
+  float: right;
+  font-family: 'icomoon';
+  font-size: 12px;
+}
+
+.news-bd {
+  padding: 10px 0 0 15px;
+}
+
+.news-bd li {
+  height: 23px;
+}
+
+.lifeservice {
+  height: 208px;
+  border: solid 1px #ccc;
+  border-top: none;
+  overflow: hidden;
+}
+
+.lifeservice ul {
+  width: 252px;
+}
+
+.lifeservice li {
+  position: relative;
+  float: left;
+  width: 62px;
+  height: 70px;
+  border-right: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+
+.lifeservice li a {
+  display: block;
+  height: 100%;
+  /* 解决a标签中i引起的外边距塌陷问题 */
+  overflow: hidden;
+  text-align: center;
+}
+
+.service_icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  margin: 10px auto;
+  background: url(../images/icons.png) no-repeat;
+}
+
+.service_icon_huafei {
+  background-position: -17px -16px;
+}
+
+.service_icon_jipiao {
+  background-position: -78px -16px;
+}
+
+.jian {
+  position: absolute;
+  height: 15px;
+  width: 12px;
+  top: 0;
+  right: 0;
+  background: url(../images/jian.jpg) no-repeat;
+}
+
+.bargain {
+  height: 75px;
+  margin-top: 5px;
+}
+/* main end */
+
+/* recommend start */
+.recommend {
+  height: 163px;
+  margin-top: 10px;
+}
+
+.recommend-hd {
+  width: 200px;
+  height: 163px;
+  background-color: #5c5251;
+  text-align: center;
+}
+
+.recommend-hd img {
+  margin: 30px 0 10px 0;
+}
+
+.recommend-hd h3 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.recommend-bd {
+  width: 1000px;
+  height: 163px;
+  background-color: #ebebeb;
+}
+
+.recommend-bd li {
+  float: left;
+  width: 249px;
+  height: 145px;
+  margin-top: 10px;
+  border-right: solid 1px #ccc;
+}
+
+.recommend-bd img {
+  width: 100%;
+  height: 100%;
+}
+/* recommend end */
+
+/* floor start */
+.box-hd {
+  height: 30px;
+  margin-top: 25px;
+  border-bottom: solid 2px #c81623;
+}
+
+.box-hd h3 {
+  float: left;
+  font-size: 18px;
+  color: #c81623;
+  font-weight: normal;
+}
+
+.tab-list {
+  float: right;
+  line-height: 30px;
+}
+
+.tab-list li {
+  float: left;
+}
+
+.tab-list li a {
+  margin: 0 15px;
+}
+
+.box-bd {
+  height: 360px;
+  overflow: hidden;
+}
+
+.box-bd img {
+  transition: all .2s;
+}
+
+.box-bd img:hover {
+  margin-left: 8px;
+}
+
+.w209 {
+  width: 209px;
+  background-color: #f9f9f9;
+}
+.w329 {
+  width: 329px;
+}
+.w219 {
+  width: 219px;
+  border-right: solid 1px #ccc;
+}
+.w220 {
+  width: 220px;
+  border-right: solid 1px #ccc;
+}
+
+.tab-con li {
+  float: left;
+  height: 360px;
+}
+
+.tab-con-item {
+  border-bottom: solid 1px #ccc;
+}
+
+.tab-con-list {
+  /* 父元素没有高度, li又浮动了, 必须清除浮动 */
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.tab-con-list li {
+  width: 86px;
+  height: 32px;
+  line-height: 32px;
+  border-bottom: solid 1px #ccc;
+  margin-left: 10px;
+  text-align: center;
+}
+/* floor end */
+
+.fixedtool {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: -686px;
+  width: 66px;
+  background-color: #fff;
+}
+
+.fixedtool li {
+  height: 32px;
+  border-bottom: solid 1px #ccc;
+  line-height: 32px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.fixedtool .current {
+  background-color: #c81623;
+}
+
+.fixedtool .current a {
+  color: #fff;
+}
