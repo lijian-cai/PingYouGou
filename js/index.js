@@ -11,13 +11,22 @@ window.addEventListener('load', function() {
     let arrow_r = document.querySelector('.arrow-r')
     arrow_l.style.display = 'none';
     arrow_r.style.display = 'none';
+    let timer = setInterval(function() {
+        // 手动调用定时器
+        arrow_r.click()
+    }, 2000)
     focus.addEventListener('mouseenter', function() {
         arrow_l.style.display = 'block';
         arrow_r.style.display = 'block';
+        clearInterval(timer)
+        timer = null
     })
     focus.addEventListener('mouseleave', function() {
             arrow_l.style.display = 'none';
             arrow_r.style.display = 'none';
+            timer = setInterval(function() {
+                arrow_r.click()
+            }, 2000)
         })
         // 通过图片生成小圆圈
     let ful = focus.querySelector('ul')
