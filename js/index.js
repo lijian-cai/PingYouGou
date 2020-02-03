@@ -50,30 +50,38 @@ window.addEventListener('load', function() {
     circles.children[0].className = 'current'
     let firstImgClone = ful.children[0].cloneNode(true)
     ful.appendChild(firstImgClone)
+    let clicked = false
     arrow_r.addEventListener('click', function() {
-        circleNum++
-        if (circleNum == imgNums) circleNum = 0;
-        if (num == imgNums) {
-            // 无缝滚动
-            ful.style.left = 0;
-            num = 0;
+        if (!clicked) {
+            clicked = true;
+            circleNum++
+            if (circleNum == imgNums) circleNum = 0;
+            if (num == imgNums) {
+                // 无缝滚动
+                ful.style.left = 0;
+                num = 0;
+            }
+            num++;
+            animation(ful, -num * focus.offsetWidth, .01, function() {
+                clicked = false
+            })
+            clearCurrent(imgNums, circles, circles.children[circleNum])
         }
-        num++;
-        animation(ful, -num * focus.offsetWidth, .01)
-        clearCurrent(imgNums, circles, circles.children[circleNum])
-
     })
     arrow_l.addEventListener('click', function() {
-        if (circleNum == 0) circleNum = imgNums;
-        circleNum--
-        if (num == 0) {
-            // 无缝滚动
-            ful.style.left = -imgNums * focus.offsetWidth;
-            num = imgNums;
+        if (!clicked) {
+            if (circleNum == 0) circleNum = imgNums;
+            circleNum--
+            if (num == 0) {
+                // 无缝滚动
+                ful.style.left = -imgNums * focus.offsetWidth;
+                num = imgNums;
+            }
+            num--;
+            animation(ful, -num * focus.offsetWidth, .01, function() {
+                clicked = false
+            })
+            clearCurrent(imgNums, circles, circles.children[circleNum])
         }
-        num--;
-        animation(ful, -num * focus.offsetWidth, .01)
-        clearCurrent(imgNums, circles, circles.children[circleNum])
-
     })
 });
