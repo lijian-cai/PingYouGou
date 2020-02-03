@@ -336,3 +336,27 @@
 .fixedtool .current a {
     color: #fff;
 }
+
+.fixedtool .backtop {
+    display: none;
+    position: relative;
+    line-height: 42px;
+}
+
+.fixedtool .backtop a {
+    color: #c81623;
+}
+
+.fixedtool .backtop a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 10px;
+    height: 10px;
+    border-top: solid 1px #c81623;
+    border-right: solid 1px #c81623;
+    color: #c81623;
+}

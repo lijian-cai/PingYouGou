@@ -1,3 +1,19 @@
+// 元素必须有left定位
+function scrollAnimation(obj, target, sec, callback) {
+    clearInterval(obj.timer);
+    obj.timer = setInterval(function() {
+        let step = (target - obj.pageYOffset) / 10;
+        step = step > 0 ? Math.ceil(step) : Math.floor(step);
+        if (obj.pageYOffset == target) {
+            clearInterval(obj.timer);
+            if (callback) {
+                callback();
+            }
+        }
+        window.scroll(0, window.pageYOffset + step)
+    }, sec * 1000);
+}
+
 function clearCurrent(imgNums, circles, _this) {
     for (let i = 0; i < imgNums; i++) {
         circles.children[i].className = '';
@@ -5,7 +21,7 @@ function clearCurrent(imgNums, circles, _this) {
     _this.className = 'current'
 }
 
-window.addEventListener('load', function() {
+function carousel() {
     let focus = document.querySelector('.focus')
     let arrow_l = document.querySelector('.arrow-l')
     let arrow_r = document.querySelector('.arrow-r')
@@ -84,4 +100,29 @@ window.addEventListener('load', function() {
             clearCurrent(imgNums, circles, circles.children[circleNum])
         }
     })
+}
+
+function showBack(backtop, floor) {
+    if (window.pageYOffset > floor.offsetTop) {
+        backtop.style.display = 'block';
+    } else {
+        backtop.style.display = 'none';
+    }
+}
+
+function backtoTop() {
+    let backtop = document.querySelector('.backtop')
+    let floor = document.querySelector('.floor')
+    showBack(backtop, floor)
+    document.addEventListener('scroll', function() {
+        showBack(backtop, floor)
+    })
+    backtop.addEventListener('click', function() {
+        scrollAnimation(window, 0, .015)
+    })
+}
+
+window.addEventListener('load', function() {
+    carousel();
+    backtoTop();
 });
