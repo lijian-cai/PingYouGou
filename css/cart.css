@@ -1,0 +1,369 @@
+.header .logo-tit {
+    position: absolute;
+    width: 100px;
+    height: 44px;
+    top: 25px;
+    left: 175px;
+    background: url(../images/cart-tit.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.line .floater {
+    position: absolute;
+    left: 0;
+    width: 79px;
+    height: 1px;
+    background: #E2231A;
+}
+
+.cart-filter-bar {
+    height: 37px;
+    line-height: 37px;
+    margin-top: 10px;
+}
+
+.cart-filter-bar li {
+    float: left;
+    height: 26px;
+    padding: 0 0 10px;
+    margin: 5px 30px 0 0;
+    line-height: 26px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.cart-filter-bar em {
+    color: #E2231A;
+}
+
+.cart-wrap {
+    margin-bottom: 20px;
+}
+
+.cart-wrap .cart-thead {
+    height: 32px;
+    line-height: 32px;
+    margin: 0 0 10px;
+    padding: 5px 0;
+    background-color: #f3f3f3;
+    border: solid 1px #e0e0e0;
+    border-top: 0;
+}
+
+.cart-wrap .cart-thead .column {
+    float: left;
+}
+
+.cart-wrap .cart-thead .t-checkbox {
+    width: 122px;
+    height: 18px;
+    line-height: 18px;
+    padding-top: 7px;
+    padding-left: 11px;
+}
+
+.cart-checkbox {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.t-checkbox .cart-checkbox,
+.options-box .select-all .cart-checkbox {
+    margin-top: 5px;
+}
+
+.cart-wrap .cart-thead .t-goods {
+    width: 208px;
+}
+
+.cart-wrap .cart-thead .t-props {
+    width: 340px;
+    height: 32px;
+    padding: 0 10px 0 20px;
+}
+
+.cart-wrap .cart-thead .t-price {
+    width: 120px;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.cart-wrap .cart-thead .t-quantity {
+    width: 80px;
+    text-align: center;
+}
+
+.cart-wrap .cart-thead .t-sum {
+    width: 100px;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.cart-wrap .cart-thead .t-action {
+    width: 75px;
+}
+
+.cart-wrap .cart-tbody .shop {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 11px;
+    font-weight: 700;
+}
+
+.cart-tbody .shop .shop-txt {
+    float: left;
+    width: 42%;
+}
+
+.cart-tbody .shop .shop-name {
+    display: inline-block;
+    max-width: 260px;
+}
+
+.cart-tbody .shop .ali-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/jd-icon-sprites.png) no-repeat -84px -49px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.cart-tbody .item-list {
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    border-color: #aaa #f1f1f1 #f1f1f1;
+    background-color: #fff;
+}
+
+.cart-tbody .item-list .item-full {
+    position: relative;
+    height: 119px;
+    border: 0;
+}
+
+.cart-tbody .item-list .item-item {
+    position: relative;
+    padding: 0 0 1px 40px;
+    line-height: 20px;
+}
+
+.cart-tbody .item-item .p-checkbox {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 30px;
+    min-height: 10px;
+}
+
+.cart-tbody .item-item .p-goods {
+    width: 300px;
+}
+
+.cart-tbody .p-goods .goods-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: solid 1px #eee;
+    margin-right: 10px;
+    padding: 0;
+    text-align: center;
+    background: #fff;
+}
+
+.cart-tbody .item-item .item-form {
+    border-top: solid 1px #f1f1f1;
+}
+
+.cart-tbody .item-item .item-form .p-props {
+    width: 130px;
+    padding: 15px 180px 0 40px;
+    line-height: 20px;
+}
+
+.cart-tbody .item-item .item-form .p-price {
+    width: 150px;
+    padding-right: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+}
+
+.cart-tbody .item-item .item-form .p-quantity {
+    position: relative;
+    height: 22px;
+    width: 80px;
+}
+
+.cart-tbody .item-item .p-quantity .quantity-form {
+    position: relative;
+    height: 22px;
+    width: 80px;
+}
+
+.cart-tbody .item-item .p-quantity a {
+    /* position: absolute; */
+    float: left;
+    width: 16px;
+    height: 18px;
+    padding: 1px 0;
+    margin: 0;
+    text-align: center;
+    line-height: 18px;
+    color: #666;
+    background-color: #fff;
+    border: solid 1px #cacbcb;
+    border-right: 0;
+}
+
+.cart-tbody .item-item .p-quantity .increment {
+    float: right;
+    border: solid 1px #cacbcb;
+    border-left: 0;
+}
+
+.cart-tbody .item-item .p-quantity input {
+    position: absolute;
+    left: 17px;
+    top: 0;
+    width: 42px;
+    height: 18px;
+    margin: 0;
+    padding: 1px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    border: solid 1px #cacbcb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cart-tbody .item-item .item-form .p-sum {
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 30px;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cart-tbody .item-item .item-form .p-actions {
+    width: 75px;
+}
+
+.cart-tbody .item-item .p-actions a {
+    display: block;
+}
+
+.cart-tbody .item-item .cell {
+    float: left;
+    padding: 15px 0 10px;
+}
+
+.cart-tbody .item-selected {
+    background-color: #fff4e8;
+}
+
+.toolbar-wrap {
+    height: 50px;
+    margin-top: 20px;
+    border: solid 1px #e0e0e0;
+}
+
+.options-box {
+    float: left;
+}
+
+.options-box .select-all {
+    float: left;
+    height: 18px;
+    padding: 16px 0 16px 9px;
+    line-height: 18px;
+}
+
+.options-box .operations {
+    float: left;
+    height: 50px;
+    width: 310px;
+    line-height: 50px;
+}
+
+.options-box .operations a {
+    margin-left: 5px;
+}
+
+.options-box .operations .clear-cart {
+    font-weight: 700;
+}
+
+.toolbar-right {
+    float: right;
+}
+
+.btn-area,
+.price-sum,
+.amount-sum {
+    float: right;
+}
+
+.btn-area .submit-btn {
+    display: inline-block;
+    width: 94px;
+    height: 51px;
+    line-height: 51px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #e54346;
+    text-align: center;
+}
+
+.price-sum {
+    height: 43px;
+    margin: 7px 5px 0 10px;
+    color: #666;
+    line-height: 43px;
+}
+
+.price-sum .txt {
+    float: left;
+    text-align: right;
+    color: #999;
+}
+
+.price-sum span {
+    margin-right: 5px;
+}
+
+.price-sum em {
+    font-size: 16px;
+    color: #E2231A;
+    font-weight: 700;
+}
+
+.price-sum b {
+    display: inline-block;
+    height: 18px;
+    width: 12px;
+    background: url(../images/price-tips.png) no-repeat 0 0;
+}
+
+.amount-sum {
+    height: 44px;
+    margin: 7px 0 0;
+    line-height: 44px;
+    color: #999;
+    cursor: pointer;
+}
+
+.amount-sum em {
+    margin: 0 3px;
+    color: #E2231A;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
