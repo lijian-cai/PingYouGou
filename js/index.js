@@ -122,7 +122,47 @@ function backtoTop() {
     })
 }
 
+function toggleTool() {
+    let toolTop = $(".recommend").offset().top;
+    if ($(document).scrollTop() >= toolTop) {
+        $(".fixedtool").fadeIn();
+    } else {
+        $(".fixedtool").fadeOut();
+    }
+}
+
+function addCurrent(_this) {
+    $(_this).addClass("current").siblings().removeClass("current")
+}
+
+function floorNav() {
+    $(".fixedtool li").click(function() {
+        clicked = true
+        let fixedtoolIndex = $(this).index()
+        let currentFloor = $(".floor .w").eq(fixedtoolIndex).offset().top;
+        addCurrent(this)
+        $("body, html").stop().animate({
+            scrollTop: currentFloor
+        }, function() {
+            clicked = false
+        })
+    })
+}
+
+let clicked = false
 window.addEventListener('load', function() {
     carousel();
     backtoTop();
+    toggleTool();
+    $(window).scroll(function() {
+        toggleTool()
+        if (!clicked) {
+            $(".floor .w").each(function(index, element) {
+                if ($(document).scrollTop() >= $(element).offset().top) {
+                    addCurrent($(".fixedtool li").eq(index))
+                }
+            })
+        }
+    })
+    floorNav();
 });
