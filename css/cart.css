@@ -111,6 +111,10 @@
     width: 75px;
 }
 
+.cart-wrap .cart-tbody .shop-main {
+    margin-bottom: 20px;
+}
+
 .cart-wrap .cart-tbody .shop {
     height: 30px;
     line-height: 30px;

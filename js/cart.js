@@ -1,4 +1,11 @@
 (function() {
+
+    updateTotal()
+    $(".shop .cart-checkbox").click(function() {
+        addBGColor(this, $(this).parents(".shop-main").find(".item-full"))
+        let checked = $(this).parents(".shop-main").find(".cart-checkbox").prop("checked")
+        $(this).parents(".shop-main").find(".cart-checkbox").prop("checked", checked)
+    })
     $(".select-all .cart-checkbox").click(function() {
         addBGColor(this, $(".item-full"))
         let checked = $(this).prop("checked")
@@ -26,7 +33,6 @@
         }
         updateSum(this, currVal)
         updateTotal()
-
     })
     $(".p-quantity input").change(function() {
         let currVal = parseInt($(this).val())
@@ -35,6 +41,16 @@
             $(this).val(currVal)
             updateTotal()
         }
+    })
+    $(".cart-remove").click(function() {
+        clearItem($(this).parents(".item-full"))
+        clearShop()
+    })
+    $(".remove-batch").click(function() {
+        clearSelected()
+    })
+    $(".clear-cart").click(function() {
+        clearAll()
     })
 }());
 
@@ -48,7 +64,6 @@ function updateTotal() {
     let total = 0
     $(".p-sum strong").each(function(index, element) {
         let currSum = parseFloat($(element).text().substr(1))
-        console.log(typeof currSum)
         total += currSum
     })
     $(".price-sum em").html(`￥${total.toFixed(2)}`)
@@ -60,4 +75,36 @@ function addBGColor(_this, _target) {
     } else {
         _target.removeClass("item-selected")
     }
+}
+
+function clearItem(_this) {
+    $(_this).remove()
+    updateTotal()
+}
+
+function clearShop() {
+    let count = 0
+    let itemNum = $(".item-list").length
+    $(".shop-main .item-list").each(function(index, element) {
+        if ($(element).children().length === 0) {
+            clearItem($(element).parents(".shop-main"))
+            count++
+        }
+    })
+    if (count === itemNum) {
+        clearAll()
+    }
+}
+
+function clearSelected() {
+    $(".p-checkbox .cart-checkbox").each(function(index, element) {
+        if ($(element).prop("checked")) {
+            clearItem($(element).parents(".item-full"))
+        }
+    })
+    clearShop()
+}
+
+function clearAll() {
+    $(".cart-main").remove()
 }
